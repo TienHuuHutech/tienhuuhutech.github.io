@@ -128,7 +128,6 @@
       "kawaii-tag",
       "kawaii-tag-small",
       "kawaii-tags",
-      "skills-grid",
       "social-links"
     ],
     "ids": [
@@ -190,7 +189,6 @@
       "8-best-practices",
       "9-ứng-dụng-thực-tế",
       "abort-request-với-abortcontroller",
-      "app-quản-lý-nhiệm-vụ-vuejs",
       "asyncawait-và-event-loop",
       "backend",
       "best-practices",
@@ -360,11 +358,7 @@
       "ví-dụ-đồng-bộ-synchronous",
       "vòng-đời-của-thread",
       "vấn-đề-race-condition",
-      "website-bán-hàng-online-react--nodejs",
-      "website-bán-sac-react--nodejs",
-      "website-bán-sách-a",
       "website-bán-sách-aspnet",
-      "website-bán-sách-react--nodejs",
       "websocket-api-cơ-bản-client-side",
       "websocket-handshake",
       "websocket-là-gì",

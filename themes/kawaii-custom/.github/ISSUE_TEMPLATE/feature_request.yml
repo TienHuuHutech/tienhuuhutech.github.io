@@ -1,0 +1,154 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the Kawaii theme
+title: "[Feature]: "
+labels: ["enhancement", "needs-review"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm you have completed the following steps
+      options:
+        - label: I have searched existing issues and discussions to avoid duplicates
+          required: true
+        - label: I have checked the documentation to ensure this feature doesn't already exist
+          required: true
+        - label: This feature request is related to the Kawaii Hugo theme
+          required: true
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: A brief summary of the feature you'd like to see
+      placeholder: Briefly describe the feature you're requesting...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: What problem does this feature solve? What's the current limitation?
+      placeholder: |
+        Is your feature request related to a problem? Please describe.
+        A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: |
+        A clear and concise description of what you want to happen.
+        How do you envision this feature working?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: |
+        A clear and concise description of any alternative solutions or features you've considered.
+        Are there any existing workarounds?
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - New component/layout
+        - Styling/design enhancement
+        - JavaScript functionality
+        - Configuration option
+        - Accessibility improvement
+        - Performance improvement
+        - Documentation improvement
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to you?
+      options:
+        - Low (nice to have)
+        - Medium (would be helpful)
+        - High (significantly improves theme)
+        - Critical (essential for my use case)
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Describe specific use cases where this feature would be beneficial
+      placeholder: |
+        Please provide specific examples of how this feature would be used:
+        1. Use case 1...
+        2. Use case 2...
+
+  - type: textarea
+    id: implementation-ideas
+    attributes:
+      label: Implementation Ideas
+      description: Do you have any ideas about how this could be implemented? (Optional)
+      placeholder: |
+        If you have technical knowledge, feel free to suggest implementation approaches.
+        This could include:
+        - CSS/SCSS changes
+        - JavaScript functionality
+        - Hugo template modifications
+        - Configuration options
+
+  - type: textarea
+    id: examples-references
+    attributes:
+      label: Examples and References
+      description: Any examples, mockups, or references that illustrate your idea? (Optional)
+      placeholder: |
+        You can include:
+        - Screenshots or mockups
+        - Links to similar implementations
+        - Code examples
+        - Design references
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be willing to contribute to implementing this feature?
+      options:
+        - label: I would be willing to help implement this feature
+        - label: I would be willing to test this feature once implemented
+        - label: I would be willing to help with documentation
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or information about the feature request
+      placeholder: Any additional information that would be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this feature request, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

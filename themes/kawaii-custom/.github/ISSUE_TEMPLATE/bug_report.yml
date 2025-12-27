@@ -1,0 +1,151 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in the Kawaii theme
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us understand and fix the issue.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm you have completed the following steps
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have checked the documentation and FAQ
+          required: true
+        - label: I am using the latest version of the Kawaii theme
+          required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe what you expected to happen...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: input
+    id: hugo-version
+    attributes:
+      label: Hugo Version
+      description: What version of Hugo are you using?
+      placeholder: e.g., v0.120.4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browser(s)
+      description: Which browsers are affected?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Opera
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device Type
+      description: What type of device are you using?
+      options:
+        - Desktop
+        - Mobile
+        - Tablet
+        - All devices
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating System
+      description: What operating system are you using?
+      placeholder: e.g., Windows 11, macOS 14.0, Ubuntu 22.04
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Theme Configuration
+      description: Please share relevant parts of your hugo.toml/config.yaml
+      render: yaml
+      placeholder: |
+        [params]
+          # Your theme configuration here
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem
+      placeholder: You can drag and drop images here
+
+  - type: textarea
+    id: console-errors
+    attributes:
+      label: Console Errors
+      description: Any JavaScript console errors or warnings?
+      render: text
+      placeholder: Paste any console errors here...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

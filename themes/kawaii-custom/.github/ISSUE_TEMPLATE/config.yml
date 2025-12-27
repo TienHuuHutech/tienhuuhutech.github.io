@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/yuis-ice/hugo-kawaii/discussions
+    about: Ask questions, share ideas, and connect with the community
+  - name: 📚 Theme Documentation
+    url: https://github.com/yuis-ice/hugo-kawaii#readme
+    about: Check the README and documentation for usage instructions
+  - name: 🌟 Hugo Community
+    url: https://discourse.gohugo.io/
+    about: General Hugo questions and community support
+  - name: 📖 Hugo Documentation
+    url: https://gohugo.io/documentation/
+    about: Official Hugo documentation and guides

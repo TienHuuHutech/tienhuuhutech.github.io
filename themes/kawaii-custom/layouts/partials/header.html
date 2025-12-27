@@ -1,0 +1,63 @@
+<header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="{{ .Site.BaseURL }}" class="kawaii-logo">
+                {{ if .Site.Params.logo }}
+                <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" class="kawaii-logo-img">
+                {{ else }}
+                <span class="kawaii-logo-text">{{ .Site.Title | default "Kawaii" }}</span>
+                {{ end }}
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}" class="kawaii-nav-link {{ if $.IsMenuCurrent "main" . }}kawaii-nav-active{{ end }}">
+                {{ .Name }}
+            </a>
+            {{ end }}
+            
+            {{ if not .Site.Menus.main }}
+            <a href="/" class="kawaii-nav-link {{ if .IsHome }}kawaii-nav-active{{ end }}">Home</a>
+            <a href="/posts" class="kawaii-nav-link {{ if eq .Section "posts" }}kawaii-nav-active{{ end }}">Posts</a>
+            <a href="/about" class="kawaii-nav-link {{ if eq .Title "About" }}kawaii-nav-active{{ end }}">About</a>
+            {{ end }}
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            {{ if .Site.Params.search }}
+            <button class="kawaii-search-toggle" aria-label="Toggle search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="21 21l-4.35-4.35"></path>
+                </svg>
+            </button>
+            {{ end }}
+            
+            {{ if .Site.Params.theme_toggle }}
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            {{ end }}
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>

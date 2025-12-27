@@ -1,0 +1,46 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ if .Params.tags }}
+            <div class="kawaii-tags">
+                {{ range .Params.tags }}
+                <span class="kawaii-tag">#{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <h1 class="kawaii-article-title">{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <p class="kawaii-article-description">{{ .Params.description }}</p>
+        {{ end }}
+    </header>
+    
+    <div class="kawaii-content">
+        {{ .Content }}
+    </div>
+    
+    {{ if or .NextInSection .PrevInSection }}
+    <nav class="kawaii-post-nav">
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}" class="kawaii-nav-prev">
+            <span class="kawaii-nav-arrow">←</span>
+            <span class="kawaii-nav-text">{{ .PrevInSection.Title }}</span>
+        </a>
+        {{ end }}
+        
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}" class="kawaii-nav-next">
+            <span class="kawaii-nav-text">{{ .NextInSection.Title }}</span>
+            <span class="kawaii-nav-arrow">→</span>
+        </a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</article>
+{{ end }}

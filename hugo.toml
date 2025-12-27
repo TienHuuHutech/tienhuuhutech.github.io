@@ -1,7 +1,7 @@
 baseURL = "https://tienhuuhutech.github.io/"
 languageCode = "vi"
 title = "TienHuuBlogs"
-theme = "kawaii"
+theme = "kawaii-custom"
 
 enableEmoji = true
 

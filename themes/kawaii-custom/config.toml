@@ -1,0 +1,5 @@
+# Hugo version requirements for Kawaii theme
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.147.0"

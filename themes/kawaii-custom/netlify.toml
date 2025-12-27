@@ -1,0 +1,11 @@
+[build]
+  publish = "exampleSite/public"
+  command = "cd exampleSite && hugo --themesDir ../.. --theme repo --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.147.0"
+  HUGO_EXTENDED = "true"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_VERSION = "0.147.0"
