@@ -1,0 +1,83 @@
+baseURL = "https://tienhuuhutech.github.io/"
+languageCode = "vi"
+title = "TienHuuBlogs"
+theme = "kawaii"
+
+enableEmoji = true
+
+[pagination]
+  pagerSize = 6
+
+[build]
+  writeStats = true
+
+[params]
+  description = "Blog cá nhân chia sẻ kiến thức lập trình mạng với Java và JavaScript"
+  author = "Đào Hữu Tiến - Sinh viên CNTT"
+  
+  theme_toggle = false
+  search = true
+  favicon = "/favicon.ico"
+  
+  hero_cta = "Xem bài viết"
+  hero_cta_link = "/blog"
+  
+  footer_description = "Blog học phần Phát triển ứng dụng Web - Lập trình mạng"
+  copyright = "© 2025 Đào Hữu Tiến"
+  mainSections = ["blog"]
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/TienHuuHutech"
+  
+ [[params.featured_sections]]
+    title = "Kiến Thức Lập Trình"
+    description = "Chia sẻ hướng dẫn về Java, JavaScript và lập trình mạng"
+    icon = "💻"
+    link = "/blog"
+  
+  [[params.featured_sections]]
+    title = "Học Tập & Thực Hành"
+    description = "Bài viết chi tiết với code mẫu cho các bạn muốn tìm hiểu"
+    icon = "📚"
+    link = "/categories"
+  
+  [[params.featured_sections]]
+    title = "Kết Nối & Chia Sẻ"
+    description = "Cùng nhau phát triển kỹ năng lập trình và xây dựng cộng đồng học tập"
+    icon = "🚀"
+    link = "/about"
+
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 20
+
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 30
+
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = false
+    style = "monokai"
+  
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
